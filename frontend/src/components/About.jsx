@@ -1,14 +1,9 @@
-import {useState, useEffect} from "react";
-import API from "../services/api";
 import useContent from "../hooks/useContent";
 
 const About = () => {
   const { content } = useContent();
 const overview = content?.overview;
 
-  useEffect(() => {
-    API.get("/content").then((res) => setOverview(res.data.overview));
-  }, []);
 
   return (
     <section className="bg-[#dfeeee] py-20">

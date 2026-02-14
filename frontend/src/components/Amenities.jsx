@@ -1,8 +1,6 @@
 import React from "react";
 import { FaDumbbell, FaChild, FaRunning, FaSpa } from "react-icons/fa";
 import { MdSelfImprovement } from "react-icons/md";
-import {useState, useEffect} from "react";
-import API from "../services/api";
 import useContent from "../hooks/useContent";
 
 
@@ -10,10 +8,6 @@ const Amenities = () => {
   const { content } = useContent();
 const amenities = content?.amenities || [];
 
-
-useEffect(() => {
-  API.get("/content").then(res => setAmenities(res.data.amenities));
-}, []);
 
   return (
     <section className="bg-[#dfeeee] py-24">

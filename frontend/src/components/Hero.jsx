@@ -1,15 +1,9 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import API from "../services/api";
 import useContent from "../hooks/useContent";
 
 const Hero = () => {
-  const { content } = useContent();
+const { content } = useContent();
 const hero = content?.hero;
 
-  useEffect(() => {
-    API.get("/content").then((res) => setHero(res.data.hero));
-  }, []);
 
   return (
     <section className="w-full pt-20 bg-white">
@@ -30,6 +24,7 @@ const hero = content?.hero;
           <div className="w-full max-w-md text-center px-6">
             {/* Logo title */}
             <h2 className="text-5xl font-serif text-gray-800">{hero?.title}</h2>
+
 
 
             {/* divider */}

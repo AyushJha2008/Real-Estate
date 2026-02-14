@@ -1,14 +1,9 @@
-import {useState, useEffect} from "react";
-import API from "../services/api";
 import useContent from "../hooks/useContent";
 
 const Construction = () => {
   const { content } = useContent();
 const construction = content?.construction || [];
 
-useEffect(() => {
-  API.get("/content").then(res => setConstruction(res.data.construction));
-}, []);
 
   return (
     <section className="bg-white py-24">
