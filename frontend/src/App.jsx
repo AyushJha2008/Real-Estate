@@ -6,14 +6,14 @@
 
 // export default App;
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {Routes, Route, HashRouter } from "react-router-dom";
 import Login from "./pages/admin/Login";
 import Dashboard from "./pages/admin/Dashboard";
 import Home from "./pages/Home";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -21,7 +21,7 @@ function App() {
         <Route path="/admin/dashboard" element={<Dashboard />} />
       </Routes>
 
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
